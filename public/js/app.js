@@ -2,7 +2,7 @@ const weatherForm = document.querySelector('form')
 const searchValue = document.querySelector('input')
 const message1 = document.querySelector('.message1')
 const message2 = document.querySelector('.message2')
-
+console.log('hello')
 weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault()
 
