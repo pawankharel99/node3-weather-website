@@ -10,14 +10,13 @@ weatherForm.addEventListener('submit', (e)=>{
     message1.textContent = 'Loading..'
     message2.textContent = ''
 
-    fetch('/weather?address='+location).then((response)=>{
+    fetch('http://localhost:3000/country?location='+location).then((response)=>{
     response.json().then((data)=>{
         if(data.Error){
             message1.textContent = data.Error
         }else{
-            message1.textContent = data.location
+            message1.textContent = 'Covid Report of '+ location.toUpperCase()
             message2.textContent = data.Forecast
-
         }
     })
 })
